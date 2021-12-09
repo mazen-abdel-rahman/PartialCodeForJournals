@@ -1,0 +1,2 @@
+# PartialCodeForJournals
+This was an attempt in between 2016 and 2017 to rewrite the journals application - both to modernize it from a UI perspective - but also to completely rewrite it in Swift.  I, unfortunately, did not have the time to continue working on it - and with the passage of time I don't exactly remember where I left off.  Right now - all it does is allow the user to "create" a journal - but nothing else.
