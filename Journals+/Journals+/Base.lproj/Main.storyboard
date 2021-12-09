@@ -1,0 +1,375 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="kKB-DW-ejU">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Main Shelf View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="MainShelfViewController" customModule="Journals_" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Lhf-QX-nfv">
+                                <rect key="frame" x="20" y="0.0" width="984" height="1272"/>
+                                <color key="backgroundColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Eq7-Il-Ij6">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="20" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CollectionCell" id="JEw-sH-K05" customClass="MZNCollectionViewCell" customModule="Journals_" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="20" width="340" height="136"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="340" height="136"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="VTI-WY-gUd">
+                                                    <rect key="frame" x="20" y="20" width="96" height="96"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="96" id="dt9-WW-Jxh"/>
+                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="96" id="pWl-dg-enM"/>
+                                                        <constraint firstAttribute="width" constant="96" id="yDk-w1-bkJ"/>
+                                                        <constraint firstAttribute="width" constant="96" id="zVH-Js-rkc"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Journal Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fyf-z7-gaD">
+                                                    <rect key="frame" x="156" y="26" width="174" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Last Edit Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GWp-DE-K1q">
+                                                    <rect key="frame" x="149" y="82" width="134" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </view>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstItem="VTI-WY-gUd" firstAttribute="centerY" secondItem="JEw-sH-K05" secondAttribute="centerY" id="FDr-Ge-IXo"/>
+                                            <constraint firstItem="VTI-WY-gUd" firstAttribute="leading" secondItem="JEw-sH-K05" secondAttribute="leading" constant="20" id="Htk-wl-DNF"/>
+                                            <constraint firstItem="VTI-WY-gUd" firstAttribute="leading" secondItem="JEw-sH-K05" secondAttribute="leadingMargin" constant="12" id="L0x-Nn-cbE"/>
+                                            <constraint firstItem="VTI-WY-gUd" firstAttribute="centerY" secondItem="JEw-sH-K05" secondAttribute="centerY" id="Lry-Cc-T9X"/>
+                                        </constraints>
+                                        <size key="customSize" width="340" height="136"/>
+                                        <connections>
+                                            <outlet property="journalCoverImage" destination="VTI-WY-gUd" id="Mjg-al-osZ"/>
+                                            <outlet property="journalName" destination="fyf-z7-gaD" id="gTy-WC-R5Q"/>
+                                            <outlet property="lastEditDate" destination="GWp-DE-K1q" id="Qip-lK-2Ly"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="mXd-r6-Vmf"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="2jJ-4q-244"/>
+                                </connections>
+                            </collectionView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="68" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="XE8-DG-jJX">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="separatorColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="MainPageJournalCellCompact" rowHeight="68" id="24a-rA-hUG" customClass="MZNMainPageCompactTableViewCell" customModule="Journals_" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="44.5" width="375" height="68"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="24a-rA-hUG" id="AtL-b6-gb5">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="68"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="goD-tu-bco">
+                                                    <rect key="frame" x="20" y="10" width="48" height="48"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="48" id="IWx-JP-0d2"/>
+                                                        <constraint firstAttribute="width" constant="48" id="gbd-eI-Yjl"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Journal Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4T6-cP-unE">
+                                                    <rect key="frame" x="76" y="16" width="170" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Last Edited: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HN9-12-SzD">
+                                                    <rect key="frame" x="76" y="37" width="64" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="10"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="goD-tu-bco" firstAttribute="leading" secondItem="AtL-b6-gb5" secondAttribute="leading" constant="20" id="06w-90-hiG"/>
+                                                <constraint firstItem="goD-tu-bco" firstAttribute="centerY" secondItem="AtL-b6-gb5" secondAttribute="centerY" id="kXn-mw-0kS"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="journalCoverImage" destination="goD-tu-bco" id="A73-1H-6Eq"/>
+                                            <outlet property="journalName" destination="4T6-cP-unE" id="mZh-YB-2vH"/>
+                                            <outlet property="lastEditDate" destination="HN9-12-SzD" id="06F-Dy-RrU"/>
+                                            <segue destination="37U-Kt-MyL" kind="show" id="IEQ-Zr-fqp"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <sections/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="nka-34-2V3"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="q6E-0a-j7X"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="Lhf-QX-nfv" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="0le-rb-vLT"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="XE8-DG-jJX" secondAttribute="bottom" id="2OA-MH-ng6"/>
+                            <constraint firstItem="XE8-DG-jJX" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="38I-Fk-7J6"/>
+                            <constraint firstItem="XE8-DG-jJX" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="CQu-89-PKH"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Lhf-QX-nfv" secondAttribute="bottom" id="Iwm-uX-f8g"/>
+                            <constraint firstItem="Lhf-QX-nfv" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Pud-Em-j1e"/>
+                            <constraint firstItem="Lhf-QX-nfv" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="T07-ep-1IP"/>
+                            <constraint firstAttribute="trailing" secondItem="XE8-DG-jJX" secondAttribute="trailing" id="m8T-NT-XKO"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="Lhf-QX-nfv"/>
+                                <exclude reference="XE8-DG-jJX"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="XE8-DG-jJX"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=regular">
+                            <mask key="subviews">
+                                <include reference="Lhf-QX-nfv"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
+                    <navigationItem key="navigationItem" id="pno-cN-G8y">
+                        <rightBarButtonItems>
+                            <barButtonItem systemItem="add" id="8EO-jr-nP0">
+                                <connections>
+                                    <action selector="addNewJournal:" destination="BYZ-38-t0r" id="ssU-xr-rsj"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem image="settingsNavBarIcon" id="9Dg-qD-Vw3"/>
+                        </rightBarButtonItems>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="collectionView" destination="Lhf-QX-nfv" id="osw-Xs-xPx"/>
+                        <outlet property="tableView" destination="XE8-DG-jJX" id="y51-YA-2EB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="949.21875" y="38.0859375"/>
+        </scene>
+        <!--Table Of Contents View Controller-->
+        <scene sceneID="RXe-Ad-ZUG">
+            <objects>
+                <viewController id="37U-Kt-MyL" customClass="TableOfContentsViewController" customModule="Journals_" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ayh-Ya-kth"/>
+                        <viewControllerLayoutGuide type="bottom" id="7NN-NO-qCh"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="mEx-S3-pLU">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="9H6-G7-sK9">
+                                <rect key="frame" x="20" y="74" width="984" height="1272"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="L1v-d1-56y">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="21" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CollectionCell" id="7LM-I7-VFy" customClass="MZNCollectionViewCell" customModule="Journals_" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="21" width="340" height="136"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="340" height="136"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tV8-YR-kzw">
+                                                    <rect key="frame" x="20" y="20" width="96" height="96"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="96" id="Yer-XF-qqR"/>
+                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="96" id="fWN-OH-yab"/>
+                                                        <constraint firstAttribute="height" constant="96" id="uUq-4S-aNT"/>
+                                                        <constraint firstAttribute="width" constant="96" id="uac-42-r3E"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Journal Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p7a-bP-ayw">
+                                                    <rect key="frame" x="156" y="26" width="174" height="21"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </view>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstItem="p7a-bP-ayw" firstAttribute="leading" secondItem="tV8-YR-kzw" secondAttribute="trailing" constant="40" id="0BJ-EK-gvT"/>
+                                            <constraint firstItem="tV8-YR-kzw" firstAttribute="leading" secondItem="7LM-I7-VFy" secondAttribute="leadingMargin" constant="12" id="8Gg-15-vcU"/>
+                                            <constraint firstItem="tV8-YR-kzw" firstAttribute="leading" secondItem="7LM-I7-VFy" secondAttribute="leading" constant="20" id="PbO-0N-X22"/>
+                                            <constraint firstItem="tV8-YR-kzw" firstAttribute="centerY" secondItem="7LM-I7-VFy" secondAttribute="centerY" id="SF7-2X-ogG"/>
+                                            <constraint firstAttribute="trailingMargin" secondItem="p7a-bP-ayw" secondAttribute="trailing" constant="2" id="brP-3Z-v3d"/>
+                                            <constraint firstItem="p7a-bP-ayw" firstAttribute="top" secondItem="7LM-I7-VFy" secondAttribute="topMargin" constant="18" id="qtB-AP-0Fq"/>
+                                            <constraint firstItem="tV8-YR-kzw" firstAttribute="centerY" secondItem="7LM-I7-VFy" secondAttribute="centerY" id="uE6-YX-8B3"/>
+                                        </constraints>
+                                        <size key="customSize" width="340" height="136"/>
+                                        <connections>
+                                            <outlet property="journalCoverImage" destination="tV8-YR-kzw" id="XH6-uG-o6g"/>
+                                            <outlet property="journalName" destination="p7a-bP-ayw" id="2gY-1q-gDE"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="37U-Kt-MyL" id="6Ff-pf-i6u"/>
+                                    <outlet property="delegate" destination="37U-Kt-MyL" id="2Ez-rv-9ag"/>
+                                </connections>
+                            </collectionView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="68" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="q2S-zT-gxf">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="separatorColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="MainPageJournalCellCompact" rowHeight="68" id="Po1-tm-FR2" customClass="MZNMainPageCompactTableViewCell" customModule="Journals_" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="44.5" width="375" height="68"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Po1-tm-FR2" id="ao7-gx-Irh">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="68"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="zSO-Mb-LXt">
+                                                    <rect key="frame" x="20" y="10" width="48" height="48"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="48" id="6YE-QM-cSF"/>
+                                                        <constraint firstAttribute="height" constant="48" id="kHp-pA-TMi"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Journal Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iYy-JD-4jW">
+                                                    <rect key="frame" x="76" y="16" width="170" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Last Edited: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dR4-Qu-BRO">
+                                                    <rect key="frame" x="76" y="37" width="64" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="10"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="zSO-Mb-LXt" firstAttribute="leading" secondItem="ao7-gx-Irh" secondAttribute="leading" constant="20" id="1zS-JH-x5Q"/>
+                                                <constraint firstItem="zSO-Mb-LXt" firstAttribute="centerY" secondItem="ao7-gx-Irh" secondAttribute="centerY" id="QEW-HW-S7F"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="journalCoverImage" destination="zSO-Mb-LXt" id="SzA-4V-rWX"/>
+                                            <outlet property="journalName" destination="iYy-JD-4jW" id="GLO-vP-LST"/>
+                                            <outlet property="lastEditDate" destination="dR4-Qu-BRO" id="oMS-dM-IOJ"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <sections/>
+                                <connections>
+                                    <outlet property="dataSource" destination="37U-Kt-MyL" id="MXz-Da-o4m"/>
+                                    <outlet property="delegate" destination="37U-Kt-MyL" id="aol-Az-RxN"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.50196081400000003" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="q2S-zT-gxf" secondAttribute="trailing" id="CDd-uY-Kjy"/>
+                            <constraint firstItem="9H6-G7-sK9" firstAttribute="trailing" secondItem="mEx-S3-pLU" secondAttribute="trailingMargin" id="WS2-2q-f2c"/>
+                            <constraint firstItem="7NN-NO-qCh" firstAttribute="top" secondItem="9H6-G7-sK9" secondAttribute="bottom" id="aSh-9L-eQP"/>
+                            <constraint firstItem="7NN-NO-qCh" firstAttribute="top" secondItem="q2S-zT-gxf" secondAttribute="bottom" id="baO-FB-OFS"/>
+                            <constraint firstItem="q2S-zT-gxf" firstAttribute="top" secondItem="mEx-S3-pLU" secondAttribute="top" id="beu-oV-kvN"/>
+                            <constraint firstItem="9H6-G7-sK9" firstAttribute="leading" secondItem="mEx-S3-pLU" secondAttribute="leadingMargin" id="pcn-Sz-Jy7"/>
+                            <constraint firstItem="q2S-zT-gxf" firstAttribute="leading" secondItem="mEx-S3-pLU" secondAttribute="leading" id="reb-Jm-l3f"/>
+                            <constraint firstItem="9H6-G7-sK9" firstAttribute="top" secondItem="ayh-Ya-kth" secondAttribute="bottom" id="t6x-bG-pqi"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="9H6-G7-sK9"/>
+                                <exclude reference="q2S-zT-gxf"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="q2S-zT-gxf"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=regular">
+                            <mask key="subviews">
+                                <include reference="9H6-G7-sK9"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <navigationItem key="navigationItem" id="KVu-pE-Rhr">
+                        <rightBarButtonItems>
+                            <barButtonItem systemItem="add" id="8I8-Vq-rrZ"/>
+                            <barButtonItem image="settingsNavBarIcon" id="Uhx-bx-aBt"/>
+                        </rightBarButtonItems>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="collectionView" destination="9H6-G7-sK9" id="8A2-cA-5Mg"/>
+                        <outlet property="tableView" destination="q2S-zT-gxf" id="DUe-1W-HhW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fa0-6x-M9a" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2049" y="37"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="tcL-Mi-ezn">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="kKB-DW-ejU" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="KA4-ky-gDL">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="k0d-ts-i08"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1q0-FE-Hsc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="10.4" y="38.23088455772114"/>
+        </scene>
+    </scenes>
+    <color key="tintColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+    <resources>
+        <image name="settingsNavBarIcon" width="16" height="16"/>
+    </resources>
+</document>
